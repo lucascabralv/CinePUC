@@ -13,6 +13,7 @@ function exibeFilmes() {
         <div class="filme-hover">
             <h2 class="titulo-filme">${filme.original_title}</h2>
             <div class="resumo-filme">${filme.overview}</div>
+            <a class="saiba-mais-cartaz" href="https://www.themoviedb.org/movie/${filme.id}" target="_blank">Saiba mais</a>
         </div>
       </div>
     `;
@@ -30,5 +31,4 @@ window.onload = function () {
     "https://api.themoviedb.org/3/trending/movie/week?api_key=c47696d427054976b7ea39e6004a9d96&language=pt-BR"
   );
   xhr.send();
-
-};
+}

@@ -1,0 +1,139 @@
+
+.banner-busca {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 400px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #004a7b;
+}
+
+.title-busca {
+  display: inline;
+  color: #fff;
+}
+
+.div-busca-wrapper {
+  width: 75vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-busca {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.busca-text {
+  color: #00b3ac;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.busca-campo {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+  border:1px solid rgba(128, 128, 128, 0.488);
+  padding: 4px 0px 4px 8px;
+}
+
+.form-block-busca {
+  margin-bottom: 40px;
+}
+
+.div-mostrar-filmes {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+.filme-busca {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.image-busca {
+  width: 250px;
+}
+
+.filme-busca-infos {
+  width: 70%;
+  margin-left: 20px;
+}
+
+.titulo-filme-busca {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 991px) {
+  .div-busca-wrapper {
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .div-busca-wrapper {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 479px) {
+
+    .banner-busca{
+        height: auto;
+        padding-top: 180px;
+        padding-bottom: 80px;
+    }
+
+  .section-busca {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .filme-busca {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .image-busca {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .filme-busca-infos {
+    width: 95%;
+    margin-left: 0px;
+  }
+
+  .titulo-filme-busca {
+    margin-top: 10px;
+  }
+}
