@@ -7,7 +7,7 @@ function exibeFilmes() {
     for (i = 0; i < dados.results.length; i++) {
       let filme = dados.results[i];
       if(filme.poster_path != null && filme.overview != ""){
-        console.log(filme);
+        let data = new Date (filme.release_date)
         texto =
           texto +
           `
@@ -15,6 +15,7 @@ function exibeFilmes() {
           <img src="https://image.tmdb.org/t/p/w500/${filme.poster_path}" loading="lazy" class="filme-cartaz-img">
           <div class="filme-hover">
               <h2 class="titulo-filme">${filme.original_title}</h2>
+              <div class=data-filme>${data.toLocaleDateString()}</div>
               <div class="resumo-filme">${filme.overview}</div>
               <a class="saiba-mais-cartaz" href="https://www.themoviedb.org/movie/${filme.id}" target="_blank">Saiba mais</a>
           </div>
