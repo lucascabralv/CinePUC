@@ -1144,7 +1144,8 @@ border-radius: 4px;
   .galeria-cartaz {
     grid-row-gap: 10px;
     grid-template-columns: 80vw;
-    grid-template-rows: 160vw;
+    grid-template-rows: 140vw;
+    grid-auto-rows: 140vw;
   }
 
   .btn-vejamais {
