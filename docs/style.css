@@ -347,7 +347,7 @@ a:hover{
   grid-column-gap: 20px;
   grid-row-gap: 16px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: 1.5fr;
 }
 
 .filme-cartaz {
@@ -356,6 +356,7 @@ a:hover{
   height: 100%;
   overflow: hidden;
   cursor: pointer;
+  min-height: 200px;
 }
 
 .filme-cartaz-img {
@@ -934,6 +935,10 @@ border-radius: 4px;
       top: 0px;
       left: 0px;
       z-index: 997;
+  }
+
+  .instrucoes{
+    display: none;
   }
 
   .busca-nav {
