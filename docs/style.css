@@ -1143,8 +1143,8 @@ border-radius: 4px;
   .galeria-cartaz {
     grid-row-gap: 10px;
     grid-template-columns: 90vw;
-    grid-template-rows: auto;
-    grid-auto-rows: auto;
+    grid-template-rows: 132.3vw;
+    grid-auto-rows: 132.3vw;
   }
   .filme-cartaz {
   width: 100%;
