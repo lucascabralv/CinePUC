@@ -2,8 +2,9 @@ body {
   font-family: Lato, sans-serif;
   overflow-x: hidden;
 }
-a{
+a:hover{
   text-decoration: none;
+  color: #00b3ac;
 }
 
 #busca-site{
@@ -262,6 +263,7 @@ a{
   height: 100%;
   justify-content: center;
   align-items: center;
+  
 }
 
 .busca-nav {
