@@ -332,10 +332,81 @@ body {
   grid-template-rows: auto auto;
 }
 
+.galeria-cartaz {
+  display: grid;
+  width: 90vw;
+  height: auto;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
 .filme-cartaz {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.filme-cartaz-img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
 }
+
+.filme-hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: top 0.5s;
+  color: white;
+  padding: 40px 15px 10px 15px;
+}
+
+.titulo-filme{
+  font-size: 24px;
+  margin: 0px auto 25px auto;
+  text-align: center;
+}
+.resumo-filme{
+  font-size: 16px;
+  display:block;
+  width: auto;
+  margin: 0px auto 10px auto;
+  text-align: left;
+  height: 70%;
+  overflow:auto;
+}
+
+/*width*/
+.resumo-filme::-webkit-scrollbar {
+width:6px;
+}
+/*track*/
+.resumo-filme::-webkit-scrollbar-track {
+background:rgba(255, 255, 255, 0);
+}
+/*thumb*/
+.resumo-filme::-webkit-scrollbar-thumb {
+background:rgb(0, 179, 172);
+border-radius: 4px;
+}
+
 
 .div-btn {
   display: flex;
@@ -450,19 +521,6 @@ body {
   line-height: 22px;
   font-weight: 300;
   text-align: center;
-}
-
-.galeria-cartaz {
-  display: grid;
-  width: 90vw;
-  height: auto;
-  max-width: 1200px;
-  margin-bottom: 20px;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 16px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
 }
 
 .btn-vejamais {
@@ -1059,7 +1117,6 @@ body {
   }
 
   .galeria-cartaz {
-    grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-columns: 1fr 1fr;
   }

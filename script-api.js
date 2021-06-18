@@ -1,21 +1,25 @@
 function exibeFilmes() {
-  let divTop = document.getElementById("divTop");
+  let divTop = document.getElementById("galeria-cartaz");
   let texto = "";
 
   let dados = JSON.parse(this.responseText);
-  for (i = 0; i < dados.results.length; i++) {
+  for (i = 0; i < 12; i++) {
     let filme = dados.results[i];
     texto =
       texto +
       `
-      <img src="https://image.tmdb.org/t/p/w300/${filme.poster_path}" alt="">
-      <div class="title">
-        ${filme.original_title}
+      <div class="filme-cartaz">
+        <img src="https://image.tmdb.org/t/p/w300/${filme.poster_path}" loading="lazy" class="filme-cartaz-img">
+        <div class="filme-hover">
+            <h2 class="titulo-filme">${filme.original_title}</h2>
+            <div class="resumo-filme">${filme.overview}</div>
+        </div>
       </div>
     `;
   }
 
   divTop.innerHTML = texto;
+  hoverFilmes();
 }
 
 window.onload = function () {
@@ -23,7 +27,8 @@ window.onload = function () {
   xhr.onload = exibeFilmes;
   xhr.open(
     "GET",
-    "https://api.themoviedb.org/3/trending/movie/week?api_key=c47696d427054976b7ea39e6004a9d96"
+    "https://api.themoviedb.org/3/trending/movie/week?api_key=c47696d427054976b7ea39e6004a9d96&language=pt-BR"
   );
   xhr.send();
+
 };
